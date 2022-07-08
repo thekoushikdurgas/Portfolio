@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.914712e3.css",
+    "main.js": "/static/js/main.75bdd3ef.js",
+    "static/media/Cloud2.png": "/static/media/Cloud2.e9d09303e966eedb5607.png",
+    "static/media/tkd.jpg": "/static/media/tkd.bfdf240b822229c89620.jpg",
+    "static/media/clouds.png": "/static/media/clouds.3c700c1313cc1cd3d3c5.png",
+    "static/media/tkd1.jpg": "/static/media/tkd1.dc719ff2b3743c16b52c.jpg",
+    "static/media/404.png": "/static/media/404.81c0007a7794d2aea0b7.png",
+    "static/media/stars.png": "/static/media/stars.90c266f7d69f1ffb6137.png",
+    "static/media/fog-low.png": "/static/media/fog-low.965eab52c95e117d1d45.png",
+    "static/media/moonsurface.jpg": "/static/media/moonsurface.a2edaf8548e78714814b.jpg",
+    "static/media/Cloud3.png": "/static/media/Cloud3.61c1434d0c21b7d95547.png",
+    "static/media/cloud1.png": "/static/media/cloud1.d681b8df4a559087b0e1.png",
+    "static/media/starframe2.png": "/static/media/starframe2.8871efb520fa0a1d1e40.png",
+    "index.html": "/index.html",
+    "main.914712e3.css.map": "/static/css/main.914712e3.css.map",
+    "main.75bdd3ef.js.map": "/static/js/main.75bdd3ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.914712e3.css",
+    "static/js/main.75bdd3ef.js"
+  ]
+}
