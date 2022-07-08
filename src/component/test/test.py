@@ -1,0 +1,2 @@
+for i in range(5,16):
+    print(".tkdnavbar .nav-indicator.socialvisible .menu-item:nth-child("+str(i)+") {transition-duration: "+str(480+((i-5)*80))+"ms;transform: translate3d(-2px, "+str(-63-((i-5)*50))+"px, 0);}")

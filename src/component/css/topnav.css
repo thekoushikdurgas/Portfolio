@@ -1,0 +1,224 @@
+.dashboardnav {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background: var(--tkd2);
+  box-shadow: 0 1px 12px hsl(174deg 63% 15% / 15%);
+  z-index: 1;
+  padding: 10px;
+  top: 15px;
+}
+.dashboardnav.projectvisible {
+  top: -115px;
+}
+.dashboardnav .nav-bar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.dashboardnav .nav-bar .sidebarOpen {
+  color: var(--text-color);
+  font-size: 25px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+.dashboardnav .nav-bar .logo Link {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.dashboardnav .nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.dashboardnav .nav-bar .nav-links div {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboardnav .nav-bar .nav-links li {
+}
+.nav-links li a,
+.nav-links li span {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--tkd1);
+  text-decoration: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dashboardnav .nav-links li a::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: var(--tkd1);
+  border-radius: 12px;
+}
+.dashboardnav .nav-links li:hover a::before,
+.dashboardnav .nav-links li.active a::before {
+  opacity: 1;
+  width: 100%;
+}
+.dashboardnav .nav-bar .darkLight-searchBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2px;
+}
+.dashboardnav .darkLight-searchBox .searchToggle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+.dashboardnav .searchToggle i {
+  position: absolute;
+  color: var(--text-color);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dashboardnav .searchToggle i.cancel {
+  opacity: 0;
+  pointer-events: none;
+  font-size: 19px;
+}
+.dashboardnav .searchBox {
+  width: 100%;
+}
+.dashboardnav .searchBox .search-field {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 6px;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 10%);
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.dashboardnav .search-field input {
+  height: 100%;
+  width: 100%;
+  padding: 0 45px 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.dashboardnav .search-field i {
+  position: absolute;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.dashboardnav .brand-logo {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dashboardnav .logo-abbr {
+  max-width: 52px;
+  filter: drop-shadow(0 0 16px var(--text-color));
+}
+.dashboardnav .nav-bar .menu .nav-links li i {
+}
+.dashboardnav .nav-links li:hover a,
+.dashboardnav .nav-links li:hover span,
+.dashboardnav .nav-links li.active a,
+.dashboardnav .nav-links li.active span {
+  color: var(--active-color);
+  transition: 0.3s;
+}
+@media (max-width: 991.98px) {
+  .dashboardnav .nav-bar .sidebarOpen {
+    display: block;
+  }
+  .dashboardnav .nav-bar .menu .nav-links li i {
+    display: block;
+  }
+  .dashboardnav .nav-bar {
+  }
+  .dashboardnav .nav-bar .nav-links li {
+  }
+  .dashboardnav .nav-links li a::before,
+  .dashboardnav .nav-links li span::before {
+    display: none;
+  }
+  .dashboardnav .menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+  }
+  .dashboardnav .nav-bar .navLogo a,
+  .dashboardnav .nav-bar .navLogo span {
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: none;
+  }
+  .dashboardnav .nav-bar .nav-links {
+  }
+  .dashboardnav .nav-links li a,
+  .dashboardnav .nav-links li span {
+  }
+}
+@media (max-width: 500px) {
+  .dashboardnav.projectvisible {
+    padding-bottom: 18px;
+    top: -105px;
+  }
+  .dashboardnav .searchBox .search-field {
+    height: 40px;
+  }
+  .dashboardnav .nav-links li a span,
+  .dashboardnav .nav-links li span span,
+  .navfullscreendiv {
+    font-size: 10px;
+  }
+  .dashboardnav .nav-bar .menu .nav-links li i {
+    font-size: 22px;
+  }
+  .dashboardnav .nav-bar .nav-links {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .dashboardnav .menu {
+    display: block;
+  }
+}
+.dashboardnav .nav-links li.active span {
+  display: none;
+}
+.dashboardnav .nav-links li.active i {
+  font-size: 35px;
+  margin: 5px;
+}
