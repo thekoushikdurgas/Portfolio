@@ -24,9 +24,9 @@ export default function App() {
     console.log("Right Click Disabled");
     return false;
   };
-  window.onresize = function () {
-    window.location.reload();
-  }
+  // window.onresize = function () {
+  //   window.location.reload();
+  // }
   return (
     <DeatailState>
       <Loader />
