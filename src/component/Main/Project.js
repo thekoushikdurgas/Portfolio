@@ -11,7 +11,7 @@ export default function Project() {
     if (myproject.length === 0) {getmyproject();}
   }, [ myproject, getmyproject]);
   return (
-    <div className="tabcontent">
+    <div className="overflow-y-auto overflow-x-hidden absolute bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-[#ffffff80] backdrop-blur-[5px] border-r-none border-b-none h-[95%] w-full top-[-100%] rounded-[0] animate-[slidetop_0.5s_forwards] left-[-1px] pb-[125px] ">
       {myproject.length !== 0 ? (
         <div className="boxes" id="boxes">
           <Routes>

@@ -28,8 +28,6 @@ section {
   font-size: 22px;
   font-weight: 700;
 }
-.contact-page-form .col-md-6.col-sm-6.col-xs-12 {
-}
 .contact-page-form.contact-form input {
   margin-bottom: 5px;
 }
@@ -62,7 +60,7 @@ section {
 }
 .contact-page-form input[type="text"],
 .contact-page-form input[type="email"],
-.custom-file-button input[type=file] {
+.custom-file-button input[type="file"] {
   padding: 12px 16px;
   width: 100%;
   font-size: 16px;
@@ -74,8 +72,6 @@ section {
   border-right: none;
   box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
   color: var(--text-color);
-}
-.contact-page-form .message-input {
 }
 .single-input-field textarea {
   width: 100%;
@@ -132,9 +128,9 @@ section {
   transform: scale(1);
 }
 .single-input-fieldsbtn input[type="submit"]:hover,
-.single-input-fieldsbtn input[type="reset"]:hover ,
+.single-input-fieldsbtn input[type="reset"]:hover,
 .single-input-fieldsbtn input[type="submit"]:focus,
-.single-input-fieldsbtn input[type="reset"]:focus{
+.single-input-fieldsbtn input[type="reset"]:focus {
   transform: scale(1.1);
 }
 .single-input-fieldsbtn input[type="submit"]:active,
@@ -145,8 +141,6 @@ section {
   color: #464646;
   text-transform: capitalize;
   font-size: 14px;
-}
-.contact-page-form {
 }
 .contact-page-map {
   margin: 36px 0;
@@ -193,6 +187,7 @@ section {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 .contact-page-form input[type="checkbox"] + label:last-child {
   margin-bottom: 0;
@@ -258,14 +253,14 @@ input[type="checkbox"]:checked + label:before {
   backdrop-filter: blur(5px);
   padding: 0 40px;
 }
-.custom-file-button input[type=file] {
+.custom-file-button input[type="file"] {
   margin-left: -2px !important;
   width: initial;
 }
-.custom-file-button input[type=file]::-webkit-file-upload-button {
+.custom-file-button input[type="file"]::-webkit-file-upload-button {
   display: none;
 }
-.custom-file-button input[type=file]::file-selector-button {
+.custom-file-button input[type="file"]::file-selector-button {
   display: none;
 }
 .custom-file-button:hover label {

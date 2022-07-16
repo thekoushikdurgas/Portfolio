@@ -11,8 +11,8 @@ export default function Popup(props) {
     }, [mysocial]);
     return (
         <>
-            <div className={`stick_block_layer ${props.showclose ? '' : 'd-none'}`} id="stick_block_layer" style={{ zIndex: 1000 }}></div>
-            <div className={`modalpop stick_popup ${props.showclose ? "visible" : "d-none"}`} id="stickLayer">
+            <div className={`stick_block_layer ${props.showclose ? '' : 'hidden'}`} id="stick_block_layer" style={{ zIndex: 1000 }}></div>
+            <div className={`modalpop stick_popup ${props.showclose ? "visible" : "hidden"}`} id="stickLayer">
                 <div className="stick_content">
                     <h2>Copyright © Designed &amp; Developed by <a href={Copyright.link} target="_blank" rel="noopener noreferrer">{Copyright.name} </a> {Copyright.year}</h2>
                     <button className="close-btn close-modal stick_close"><i className="fas fa-times"></i></button>

@@ -88,6 +88,24 @@ export default function DeatailState(props) {
     const json = await response.json();
     setmyknowleges(json);
   };
+  const [myinternships, setmyinternships] = useState([]);
+  const getmyinternships = async () => {
+    const response = await fetch(`${host}/api/internship`, {
+      method: "GET",
+      headers: headers,
+    });
+    const json = await response.json();
+    setmyinternships(json);
+  };
+  const [mycertificates, setmycertificates] = useState([]);
+  const getmycertificates = async () => {
+    const response = await fetch(`${host}/api/licensecertification`, {
+      method: "GET",
+      headers: headers,
+    });
+    const json = await response.json();
+    setmycertificates(json);
+  };
   const [myfriend, setmyfriend] = useState([]);
   const getmyfriend = async () => {
     const response = await fetch(`${host}/api/friends`, {
@@ -169,6 +187,7 @@ export default function DeatailState(props) {
     return str === "" ? "" : str[0].toUpperCase() + str.slice(1);
   };
   const formatDate = (date, format, utc) => {
+    date = new Date(date);
     var MMMM = [
       "\x00",
       "January",
@@ -271,6 +290,14 @@ export default function DeatailState(props) {
     format = format.replace(/\\(.)/g, "$1");
     return format;
   };
+  const [windowinnerWidth, setwindowinnerWidth] = useState([]);
+  window.onresize=()=> {
+    if (window.innerWidth <= 640) {setwindowinnerWidth("sm");}
+    else if (window.innerWidth <= 768) {setwindowinnerWidth("md");}
+    else if (window.innerWidth <= 1024) {setwindowinnerWidth("lg");}
+    else if (window.innerWidth <= 1280) {setwindowinnerWidth("xl");}
+    else if (window.innerWidth <= 1536) {setwindowinnerWidth("2xl");}
+  }
   return (
     <DeatailContext.Provider
       value={{
@@ -310,6 +337,11 @@ export default function DeatailState(props) {
         geteducation: geteducation,
         alertactive: alertactive,
         getalertactive: getalertactive,
+        myinternships: myinternships,
+        getmyinternships: getmyinternships,
+        mycertificates: mycertificates,
+        getmycertificates: getmycertificates,
+        windowinnerWidth: windowinnerWidth,
       }}
     >
       {props.children}
