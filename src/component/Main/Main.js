@@ -34,7 +34,7 @@ export default function Main() {
           <ul className="nav relative flex bg-tkd2 h-[80px] md:rounded-[2vw_2vw_0_0] rounded-[20px_20px_0_0] filtergoo justify-between items-center z-[2]">
             <div className={`nav-indicator w-[90px] sm:w-[105px] h-[105px] rounded-[50%] bg-tkd2 absolute bottom-[20px] left-0 right-0 m-auto z-[-5] transition-[height_0.3s] ${socialvisible?"socialvisible":""}`}>
               {mysocial.map((object, i)=>(
-                <a href={object.link} className={`menu-item bg-tkd2 rounded-[50%] w-[70px] h-[70px] absolute flex text-tkd1 transition-transform ease-out items-center justify-center text-[21px] 2xl:hidden ${socialvisible?"ease-tkdanimation1":""}`} style={{transitionDuration: `${socialvisible?((i+1)*160):(70+(i*60))}ms`,transform : `translate(${socialvisible?translatex[i]:10}px, ${socialvisible?translatey[i]:5}px)`}} key={i} target="_blank" rel="noopener noreferrer">
+                <a href={object.link} className={`menu-item bg-tkd2 rounded-[50%] w-[70px] h-[70px] absolute flex text-tkd1 transition-transform ease-out items-center justify-center text-[21px] ${socialvisible?"ease-tkdanimation1":""}`} style={{transitionDuration: `${socialvisible?((i+1)*160):(70+(i*60))}ms`,transform : `translate(${socialvisible?translatex[i]:10}px, ${socialvisible?translatey[i]:5}px)`}} key={i} target="_blank" rel="noopener noreferrer">
                   <i className={object.icon}></i> 
                 </a>
               ))}  
