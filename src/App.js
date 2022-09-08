@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./component/css/keyframe.css";
-import "./component/css/style.css";
-import Main from "./component/Main/Main";
-import DeatailState from "./component/context/DeatailState";
+import "./style.css";
+import Main from "./Main";
+import DeatailState from "./DeatailState";
 // import Loader from "./component/Loader/Loader";
-import SunMoon from "./component/SunMoon/SunMoon";
-// import Popup from "./component/Popup/Popup";
+// import Popup from "./Popup";
+import Sign from "./Sign";
+import SunMoon from "./SunMoon";
+import Fullscreen from "./Fullscreen";
 
 export default function App() {
   // const [visible1, setvisible1] = React.useState(false);
@@ -14,7 +15,7 @@ export default function App() {
   //   setvisible1(false);
   // };
   // document.onmouseleave = function () {
-    // setvisible1(true);
+  // setvisible1(true);
   // };
   // document.oncontextmenu = function () {
   //   console.log("Right Click Disabled");
@@ -24,12 +25,14 @@ export default function App() {
     <DeatailState>
       {/* <Loader /> */}
       <SunMoon />
+      <div className="absolute top-0 right-0 z-[5] w-full"><Sign /></div>
       {/* <Popup showclose={visible1} /> */}
       <Router>
         <Routes>
           <Route path="/*" element={<Main title="Home" />} />
         </Routes>
       </Router>
+      <div className="absolute top-0 right-0 z-[5] hidden md:block"><Fullscreen /></div>
     </DeatailState>
   );
 }

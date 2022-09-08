@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import DeatailContext from "../context/DeatailContext";
-import Loading from "../Loading/Loading";
-import Card from "../Card/Card";
+import DeatailContext from "./DeatailContext";
+import Loading from "./Loading";
+import Card from "./Card/Card";
 
 export default function Project() {
   const context = useContext(DeatailContext);

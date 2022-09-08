@@ -1,16 +1,16 @@
 import React,{useState,useEffect,useContext} from 'react';
 import { Link, Route, Routes, useLocation, Navigate } from "react-router-dom";
-import DeatailContext from "../context/DeatailContext";
-import myimg from '../css/tkd.jpg';
-import Fullscreen from '../Fullscreen/Fullscreen';
-import foglow from '../css/fog-low.png';
+import DeatailContext from "./DeatailContext";
+// import myimg from '../css/tkd.jpg';
+// import Fullscreen from '../Fullscreen/Fullscreen';
+// import foglow from 'http://koushikchandrasaha.thekoushikdurgas.in/img/fog-low.png';
 import About from './About';
 import Resume from './Resume';
 import Project from './Project';
 import Contactus from './Contactus';
 import Social from './Social';
-import Error404 from '../404/404';
-import Alert from '../Alert/Alert';
+import Error404 from './404';
+import Alert from './Alert';
 
 export default function Main() {
   const context = useContext(DeatailContext);
@@ -34,7 +34,7 @@ export default function Main() {
           <ul className="nav relative flex bg-tkd2 h-[80px] md:rounded-[2vw_2vw_0_0] rounded-[20px_20px_0_0] filtergoo justify-between items-center z-[2]">
             <div className={`nav-indicator w-[90px] sm:w-[105px] h-[105px] rounded-[50%] bg-tkd2 absolute bottom-[20px] left-0 right-0 m-auto z-[-5] transition-[height_0.3s] ${socialvisible?"socialvisible":""}`}>
               {mysocial.map((object, i)=>(
-                <a href={object.link} className={`menu-item bg-tkd2 rounded-[50%] w-[70px] h-[70px] absolute flex text-tkd1 transition-transform ease-out items-center justify-center text-[21px] ${socialvisible?"ease-tkdanimation1":""}`} style={{transitionDuration: `${socialvisible?((i+1)*160):(70+(i*60))}ms`,transform : `translate(${socialvisible?translatex[i]:10}px, ${socialvisible?translatey[i]:5}px)`}} key={i} target="_blank" rel="noopener noreferrer">
+                <a href={object.link} className={`menu-item bg-tkd2 rounded-[50%] w-[70px] h-[70px] absolute flex text-tkd1 transition-transform ease-out items-center justify-center text-[21px] ${socialvisible?"ease-tkdanimation1":""}`} style={{transitionDuration: `${socialvisible?((i+1)*160):(70+(i*60))}ms`,transform : `translate(${socialvisible?translatex[i]:10}px, ${socialvisible?translatey[i]:5}px)`}} target="_blank" rel="noopener noreferrer" key={i}>
                   <i className={object.icon}></i> 
                 </a>
               ))}  
@@ -55,7 +55,7 @@ export default function Main() {
               <Link to="/social/" className={`text-tkd1 w-[105px] h-full flex z-[1] relative justify-center items-center flex-col gap-2 after:content-[""] after:w-full after:h-[2px] after:bg-tkd1 after:absolute after:rounded-[100px] translate-y-[-23px] ${location[1] === 'social' ? "navitemactive1 text-activecolor after:bottom-[-24px]" : "after:bottom-[-36px]"}`} onClick={() => { setsocialvisible(!socialvisible);setprojectvisible(false); }}>
                 <div className="w-[60px] sm:w-[70px] h-[60px] sm:h-[70px] z-[200] rounded-[50%]">
                   <div className='rounded-[50%] overflow-hidden h-[100%] w-[100%]'>
-                    <img src={myimg} alt="TheKoushikDurgas" className='scale-110 w-[100%]' />
+                    <img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/tkd.jpg`} alt="TheKoushikDurgas" className='scale-110 w-[100%]' />
                   </div>
                 </div>
                 <span className="md:text-[12px] text-[10px] flex flex-col sm:flex-row items-center leading-[1]"><span>Koushik</span><span>Chandra</span><span>Saha</span></span>
@@ -99,18 +99,15 @@ export default function Main() {
           </nav>
         </div>
       </div>
-      <div className="portfolio">
-        <div className="presentation-subtitle text-center">
-          <div className="stage">{[...Array(20).keys()].map((i) => {return <div className="layer" key={i}></div>})}</div>
-        </div>
+      {/* <div className="portfolio">
         <div className="tkdwrapper">
-          <div className="fog-low"><img src={foglow} alt="" /></div>
-          <div className="fog-low right"><img src={foglow} alt="" /></div>
+          <div className="fog-low"><img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/fog-low.png`} alt="" /></div>
+          <div className="fog-low right"><img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/fog-low.png`} alt="" /></div>
           <div className="moving-clouds"></div>
         </div>
         <div className="fullscreendiv"><Fullscreen /></div>
-      </div>
-      <div className="relative z-[3] md:h-[89vh] h-[87vh] text-tkd">
+      </div> */}
+      <div className="relative z-[3] md:h-[89vh] h-[87vh] text-tkd w-full bottom-[-35px]">
         <Routes>
           <Route exact path="" element={<Navigate to='/about/' />} />
           <Route exact path="about/" element={<About />}/>

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
+/* :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -116,9 +116,6 @@ a {
 ul {
   list-style-type: none;
 }
-.filtergoo {
-  filter: url(#goo) !important;
-}
 html,
 body {
   font-family: "Poppins", sans-serif;
@@ -221,6 +218,9 @@ body:before {
   background: url(Cloud3.png) bottom repeat-x;
   animation-duration: 120s;
   background-size: contain;
+} */
+.filtergoo {
+  filter: url(#goo) !important;
 }
 .toggle {
   transform: scale(0.7);
@@ -1832,7 +1832,7 @@ body:before {
   margin-left: 30%;
   opacity: 1;
 }
-.tkdwrapper .moving-clouds {
+/* .tkdwrapper .moving-clouds {
   background-image: url("clouds.png");
   position: absolute;
   z-index: 1;
@@ -1841,7 +1841,7 @@ body:before {
   width: 250.625em;
   height: 100%;
   animation: cloudLoop 80s linear infinite;
-}
+} */
 .stage {
   perspective: 9999px;
   transform-style: preserve-3d;
@@ -2577,10 +2577,6 @@ body:before {
   .dashboardnav .nav-bar .menu .nav-links li i {
     display: block;
   }
-  .dashboardnav .nav-links li a::before,
-  .dashboardnav .nav-links li span::before {
-    display: none;
-  }
   .dashboardnav .menu {
     position: fixed;
     bottom: 0;
@@ -2618,6 +2614,10 @@ body:before {
   }
   .dashboardnav .menu {
     display: block;
+  }
+  .dashboardnav .nav-links li a::before,
+  .dashboardnav .nav-links li span::before {
+    display: none;
   }
 }
 .dashboardnav .nav-links li.active span {

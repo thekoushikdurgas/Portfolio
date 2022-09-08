@@ -1,6 +1,6 @@
 import React from "react";
 import "./contactus.css";
-import DeatailContext from "../context/DeatailContext";
+import DeatailContext from "../DeatailContext";
 
 export default function Contactus(props) {
   const context = React.useContext(DeatailContext);

@@ -1,5 +1,5 @@
 import React from "react";
-import DeatailContext from "../context/DeatailContext";
+import DeatailContext from "./DeatailContext";
 
 export default function Social() {
   const context = React.useContext(DeatailContext);

@@ -1,8 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import DeatailContext from "../context/DeatailContext";
-import Loading from "../Loading/Loading";
-import tkd1 from "../css/tkd1.jpg";
+import DeatailContext from "./DeatailContext";
+import Loading from "./Loading";
 import Scrambles from './Scrambles';
 
 export default function About() {
@@ -17,7 +16,7 @@ export default function About() {
     if (myproject.length === 0) {getmyproject();}
   }, [mydetail, myservice, myskills, mylanguages, getmydetail, getmyservice, getmyskills, getmylanguages, myproject, getmyproject]);
   return (
-    <div className="overflow-y-auto overflow-x-hidden absolute bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-[#ffffff80] backdrop-blur-[5px] border-r-none border-b-none h-[95%] w-full top-[-100%] rounded-[0] animate-[slidetop_0.5s_forwards] left-[-1px] pb-[125px] gap-15">
+    <div className="overflow-y-auto overflow-x-hidden absolute bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-[#ffffff80] backdrop-blur-[5px] border-r-none border-b-none h-[95%] w-full top-0 rounded-[0] animate-[slidetop_0.5s_forwards] left-[-1px] pb-[125px] gap-15">
     {mydetail.length !== 0 && myproject.length !== 0 && myservice.length !== 0 && myskills.length !== 0 && mylanguages.length !== 0 ? (
         <>
           <div className="sticky top-[0] w-fit rounded-[0_0_10px_10px] md:rounded-[0_0_1vw_1vw] px-[10px] md:px-[1vw] text-[20px] md:text-[2vw] z-[200] m-[0_auto] bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-t-0 border-[#ffffff80] backdrop-blur-[5px]">About Me</div>
@@ -25,7 +24,7 @@ export default function About() {
             <div className="flex flex-col items-center md:m-[1vw] m-auto gap-5">
               <div className="z-[200] rounded-[10px] md:rounded-[1vw] md:w-[28vw] w-[250px] md:h-[28vw] h-[250px] md:p-[0.5vw] p-[5px] m-auto bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-[#ffffff80] backdrop-blur-[5px]">
                 <div className="rounded-[10px] md:rounded-[1vw] overflow-hidden h-[100%] w-[100%]">
-                  <img src={tkd1} alt="Koushik Chandra Saha" className='w-[100%]' />
+                  <img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/tkd1.jpg`} alt="Koushik Chandra Saha" className='w-[100%]' />
                 </div>
               </div>
               <div className="flex gap-5">

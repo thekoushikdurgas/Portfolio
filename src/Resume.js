@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
-import DeatailContext from "../context/DeatailContext";
-import Loading from "../Loading/Loading";
+import DeatailContext from "./DeatailContext";
+import Loading from "./Loading";
 
 export default function Resume() {
   const context = useContext(DeatailContext);
