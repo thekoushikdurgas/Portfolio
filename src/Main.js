@@ -11,16 +11,23 @@ import Contactus from './Contactus';
 import Social from './Social';
 import Error404 from './404';
 import Alert from './Alert';
+import Popup from "./Popup";
 
 export default function Main() {
   const context = useContext(DeatailContext);
-  const { mysocial,getmysocial,alertactive} = context;
+  const { mysocial,getmysocial,alertactive,getpopvisible} = context;
   const location = (useLocation().pathname).split('/');
   const [socialvisible,setsocialvisible] = useState(false);
   const [projectvisible,setprojectvisible] = useState(false);
   document.title = `Home - TheKoushikDurgas`;
   const translatex =[121.425,73.1854,-52.0496,-98.407,10,10,10,10,10];
   const translatey =[-20,-80,-80,-20,-66,-122,-178,-234,-290];
+  // document.onmouseenter = function () {
+  //   getpopvisible(false);
+  // };
+  document.onmouseleave = function () {
+    getpopvisible(true);
+  };
   useEffect(() => {
     if(mysocial.length === 0){getmysocial()}
     // location[1] === "social" ? setsocialvisible(true) : setsocialvisible(false);
@@ -29,6 +36,7 @@ export default function Main() {
   return (
     <>
       <Alert alertactive={alertactive} />
+      <Popup/>
       <div className="tkdnavbar absolute bottom-0 z-[1000] w-full">
         <div className="tkdnav">
           <ul className="nav relative flex bg-tkd2 h-[80px] md:rounded-[2vw_2vw_0_0] rounded-[20px_20px_0_0] filtergoo justify-between items-center z-[2]">

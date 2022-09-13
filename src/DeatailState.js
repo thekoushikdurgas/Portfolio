@@ -135,6 +135,8 @@ export default function DeatailState(props) {
   };
   const [alertactive, setalertactive] = React.useState([false, '', '']);
   const getalertactive = (a,b,c)=>{setalertactive(a,b,c);};
+  const [popvisible, setpopvisible] = React.useState(false);
+  const getpopvisible = (t)=>{setpopvisible(t)};
   const [state, setstate] = useState([]);
   const getstate = async () => {
     const response = await fetch(`${host}/api/state`, {
@@ -342,6 +344,8 @@ export default function DeatailState(props) {
         mycertificates: mycertificates,
         getmycertificates: getmycertificates,
         windowinnerWidth: windowinnerWidth,
+        popvisible: popvisible,
+        getpopvisible: getpopvisible,
       }}
     >
       {props.children}
