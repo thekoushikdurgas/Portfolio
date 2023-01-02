@@ -25,7 +25,7 @@ yarn-error.log*
 
 git add . && git commit -m "8/7/2020" && git push origin main
 git init
-git remote add origin https://github.com/thekoushikdurgas/Portfolio.git
+git remote add origin https://github.com/thekoushikdurgas/server-tkd.git
 git remote -v
-git checkout -b build
-git add . && git commit -m "8/7/2020" && git push origin build -f
+git checkout -b main
+git add . && git commit -m "8/7/2020" && git push origin main -f
