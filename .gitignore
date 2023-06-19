@@ -6,6 +6,7 @@
 .pnp.js
 /build
 /buildfiles
+yarn.lock
 # testing
 /coverage
 
