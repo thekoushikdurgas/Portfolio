@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DeatailContext from "./DeatailContext";
 
 export default function DeatailState(props) {
-  const host = "https://thekoushikdurgasserver.onrender.com";
+  const host = "https://tkdserver.onrender.com";
   const headers = {
     "Content-Type": "application/json",
     "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI5ZmE4M2I2Zjc1OGY0OGIxY2E4YzdmIn0sImlhdCI6MTY1NDY5MDYwMX0._sln2d2AROxcp0qMosUrIIkNkW5PNZsm2YUBFNL3mvg",

@@ -3,7 +3,7 @@ import { Link, Route, Routes, useLocation, Navigate } from "react-router-dom";
 import DeatailContext from "./DeatailContext";
 // import myimg from '../css/tkd.jpg';
 // import Fullscreen from '../Fullscreen/Fullscreen';
-// import foglow from 'http://koushikchandrasaha.thekoushikdurgas.in/img/fog-low.png';
+// import foglow from 'https://thekoushikdurgas.github.io/TKDstroage/img/fog-low.png';
 import About from './About';
 import Resume from './Resume';
 import Project from './Project';
@@ -63,7 +63,7 @@ export default function Main() {
               <Link to="/social/" className={`text-tkd1 w-[105px] h-full flex z-[1] relative justify-center items-center flex-col gap-2 after:content-[""] after:w-full after:h-[2px] after:bg-tkd1 after:absolute after:rounded-[100px] translate-y-[-23px] ${location[1] === 'social' ? "navitemactive1 text-activecolor after:bottom-[-24px]" : "after:bottom-[-36px]"}`} onClick={() => { setsocialvisible(!socialvisible);setprojectvisible(false); }}>
                 <div className="w-[60px] sm:w-[70px] h-[60px] sm:h-[70px] z-[200] rounded-[50%]">
                   <div className='rounded-[50%] overflow-hidden h-[100%] w-[100%]'>
-                    <img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/tkd.jpg`} alt="TheKoushikDurgas" className='scale-110 w-[100%]' />
+                    <img src={`https://thekoushikdurgas.github.io/TKDstroage/img/tkd.jpg`} alt="TheKoushikDurgas" className='scale-110 w-[100%]' />
                   </div>
                 </div>
                 <span className="md:text-[12px] text-[10px] flex flex-col sm:flex-row items-center leading-[1]"><span>Koushik</span><span>Chandra</span><span>Saha</span></span>
@@ -109,8 +109,8 @@ export default function Main() {
       </div>
       {/* <div className="portfolio">
         <div className="tkdwrapper">
-          <div className="fog-low"><img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/fog-low.png`} alt="" /></div>
-          <div className="fog-low right"><img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/fog-low.png`} alt="" /></div>
+          <div className="fog-low"><img src={`https://thekoushikdurgas.github.io/TKDstroage/img/fog-low.png`} alt="" /></div>
+          <div className="fog-low right"><img src={`https://thekoushikdurgas.github.io/TKDstroage/img/fog-low.png`} alt="" /></div>
           <div className="moving-clouds"></div>
         </div>
         <div className="fullscreendiv"><Fullscreen /></div>

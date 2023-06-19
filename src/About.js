@@ -24,7 +24,7 @@ export default function About() {
             <div className="flex flex-col items-center md:m-[1vw] m-auto gap-5">
               <div className="z-[200] rounded-[10px] md:rounded-[1vw] md:w-[28vw] w-[250px] md:h-[28vw] h-[250px] md:p-[0.5vw] p-[5px] m-auto bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-[#ffffff80] backdrop-blur-[5px]">
                 <div className="rounded-[10px] md:rounded-[1vw] overflow-hidden h-[100%] w-[100%]">
-                  <img src={`http://koushikchandrasaha.thekoushikdurgas.in/img/tkd1.jpg`} alt="Koushik Chandra Saha" className='w-[100%]' />
+                  <img src={`https://thekoushikdurgas.github.io/TKDstroage/img/tkd1.jpg`} alt="Koushik Chandra Saha" className='w-[100%]' />
                 </div>
               </div>
               <div className="flex gap-5">

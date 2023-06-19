@@ -8,7 +8,7 @@ export default function Error() {
   return (
     <div className="w-full h-full grid justify-center leading-[1] gap-5 animate-[0.7s_ease_0s_1_normal_none_running_zoomin]">
       <div className="relative grid justify-items-center">
-        <img src='http://koushikchandrasaha.thekoushikdurgas.in/img/404.png' alt="404 Error" className="w-[35vmin]" />
+        <img src='https://thekoushikdurgas.github.io/TKDstroage/img/404.png' alt="404 Error" className="w-[35vmin]" />
         <p className="absolute w-max bottom-[5vh] font-['Mr_Dafoe'] md:text-[8vw] text-[70px] text-center text-white rotate-[-7deg]" style={{textShadow:'0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1'}}>404 error</p>
       </div>
       <p className="md:text-[4vw] text-[40px] text-center text-transparent" style={{"WebkitTextStrokeWidth":"1px","textStrokeWidth":"1px","WebkitTextStrokeColor":"#ffffff","MozTextStrokeColor":"#ffffff","textStrokeColor":"#ffffff"}}>OOPS!</p>
