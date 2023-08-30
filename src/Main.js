@@ -36,7 +36,7 @@ export default function Main() {
   return (
     <>
       <Alert alertactive={alertactive} />
-      <Popup/>
+      {/* <Popup/> */}
       <div className="tkdnavbar absolute bottom-0 z-[1000] w-full">
         <div className="tkdnav">
           <ul className="nav relative flex bg-tkd2 h-[80px] md:rounded-[2vw_2vw_0_0] rounded-[20px_20px_0_0] filtergoo justify-between items-center z-[2]">

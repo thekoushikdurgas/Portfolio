@@ -11,7 +11,7 @@ export default function Popup() {
     }, [mysocial]);
     return (
         <>
-            <div className={`stick_block_layer ${popvisible ? '' : 'hidden'}`} id="stick_block_layer" style={{ zIndex: 9999 }}></div>
+            <div className={`stick_block_layer ${popvisible ? '' : 'hidden'}`} id="stick_block_layer" style={{ zIndex: 9999 }} onClick={() => { getpopvisible(false) }}></div>
             <div className={`modalpop md:rounded-[1vw] rounded-[10px] bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-[#ffffff80] backdrop-blur-[5px] stick_popup ${popvisible ? "visible" : "hidden"}`} id="stickLayer">
                 <div className="stick_content gap-5">
                     <h2 className='top-[0] w-fit rounded-[0_0_10px_10px] md:rounded-[0_0_1vw_1vw] px-[10px] md:px-[1vw] text-[20px] md:text-[2vw] z-[200] m-[0_auto] bg-[#ffffff1a] shadow-[0_20px_50px_#00000026] border border-t-0 border-[#ffffff80] backdrop-blur-[5px]'>Copyright © Designed &amp; Developed by <a href={Copyright.link} target="_blank" rel="noopener noreferrer">{Copyright.name} </a> {Copyright.year}</h2>
