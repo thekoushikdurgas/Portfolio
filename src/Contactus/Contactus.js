@@ -5,7 +5,7 @@ import DeatailContext from "../DeatailContext";
 export default function Contactus(props) {
   const context = React.useContext(DeatailContext);
   const { getalertactive } = context;
-  const host = "https://tkdserver.onrender.com";
+  const host = "http://server.thekoushikdurgas.com";
   const [name,setname] = React.useState("");
   const [email,setemail] = React.useState("");
   const [message,setmessage] = React.useState("");
